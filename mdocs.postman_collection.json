@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "f67ea8d4-ecf2-4f0f-94b0-1bbd79f83078",
+		"name": "mdocs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateDocs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"fileowner\":\"Jahanzaib\",\n    \"filehash\":\"12345678\",\n    \"filename\":\"mdocs\",\n    \"filetype\":\".docx\",\n    \"fileid\":\"12345678-Jahanzaib-mdocs\",\n    \"fid\":\"111\",\n    \"fic\":\"222\",\n    \"fis\":\"333\",\n    \"filepath\":\"dummyPath\",\n    \"authortype\":\"qwerty\",\n    \"authoralias\":\"qaz\",\n    \"parenthash\":\"11224323\",\n    \"discardfile\":false,\n    \"version\":1\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8899/api/createDoc",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"api",
+						"createDoc"
+					]
+				},
+				"description": "DocsLock"
+			},
+			"response": []
+		},
+		{
+			"name": "queryHistory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8899/api/queryhistory/12345678-Jahanzaib-mdocs",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"api",
+						"queryhistory",
+						"12345678-Jahanzaib-mdocs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateApprove",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fileId\":\"11111111111111111111111111111110-edu-summary.pdf\",\n     \"aHash\":\"1111111111111\",\n     \"aBy\":\"jahanzaib_ahmad\",\n     \"aTitle\":\"docs\",\n     \"aTimeStamp\":\"10-09-1999\",\n     \"aComments\":\"xyz\",\n     \"aStatus\":\"Approved\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8899/api/updateApprove",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"api",
+						"updateApprove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "queryDocument",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8899/api/query/12345678-Jahanzaib-mdocs",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"api",
+						"query",
+						"12345678-Jahanzaib-mdocs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QueryAllDocuments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8899/",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateReview",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"fileid\":\"12345678-Jahanzaib-mdocs\",\n     \"rHash\":\"1111111111111\",\n     \"rBy\":\"jahanzaib_ahmad\",\n     \"rTitle\":\"docs\",\n     \"rTimeStamp\":\"10-09-1999\",\n     \"rComments\":\"xyz\",\n     \"rStatus\":\"Review\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8899/api/updateReview",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"api",
+						"updateReview"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
