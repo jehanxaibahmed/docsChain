@@ -243,6 +243,6 @@ app.post('/api/updateEvent', async function (req, res) {
 
 //Starting Server...
 const server = http.createServer(app);
-const port = 9910;
+const port = 8899;
 server.listen(port);
 console.debug('Server listening on port ' + port);
